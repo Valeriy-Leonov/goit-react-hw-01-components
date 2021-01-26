@@ -5,7 +5,6 @@ import user from './user.json';
 function App() {
   return (
     <div className="App">
-      <h1>Привет </h1>
       <Profile
         name={user.name}
         tag={user.tag}
