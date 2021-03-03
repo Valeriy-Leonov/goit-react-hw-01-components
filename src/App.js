@@ -1,11 +1,14 @@
 import './App.scss';
-import Profile from './components/Profile';
+import Profile from './components/Profile/';
+import Statistics from './components/Statistics/';
+import FriendList from './components/FriendList';
 import user from './user.json';
-
+import stats from './statistical-data.json';
+import friends from './friends.json';
+console.log(friends);
 function App() {
   return (
     <>
-      <h1>Привет </h1>
       <div className="App">
         <Profile
           name={user.name}
@@ -14,6 +17,8 @@ function App() {
           avatar={user.avatar}
           stats={user.stats}
         />
+        <Statistics title={'Upload stats'} stats={stats} />
+        <FriendList friends={friends} />
       </div>
     </>
   );
